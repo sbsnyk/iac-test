@@ -11,7 +11,7 @@ locals {
   )
 }
 
-resource "azurerm_key_vault_secret" "example" {
+resource "azurerm_key_vault_secret" "example3" {
   for_each = locals.other_config.myvalues
 
   name         = "testname"
