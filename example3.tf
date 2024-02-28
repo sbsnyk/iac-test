@@ -1,5 +1,4 @@
 locals {
-  myvalues = toset( ["a", "b"] )
   config = {
     myvalues = toset( ["a", "b"] )
   }
