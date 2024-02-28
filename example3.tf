@@ -14,6 +14,6 @@ locals {
 resource "azurerm_key_vault_secret" "example3" {
   for_each = local.other_config.myvalues
 
-  name         = each.key
+  name         = format("%s-test-123", trimprefix(each.key, "${terraform.workspace}-"))
   value        = "testvalue"
 }
